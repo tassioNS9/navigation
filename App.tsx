@@ -1,9 +1,9 @@
-import Product from "@/app/Product";
+import { Routes } from "@/routes";
 import React from "react";
 import { StyleSheet } from "react-native";
 
 export default function App() {
-  return <Product />;
+  return <Routes />;
 }
 
 const styles = StyleSheet.create({
