@@ -3,8 +3,10 @@ import { View } from "react-native";
 import { Header } from "../components/Header";
 import { Title } from "../components/Title";
 import { ButtonIcon } from "../components/ButtonIcon";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Home() {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -16,7 +18,10 @@ export default function Home() {
     >
       <Header>
         <Title>Home</Title>
-        <ButtonIcon name="add-circle" />
+        <ButtonIcon
+          name="add-circle"
+          onPress={() => navigation.navigate("Product")}
+        />
       </Header>
     </View>
   );
