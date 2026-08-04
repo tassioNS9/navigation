@@ -1,12 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 import { Header } from "../components/Header";
 import { Title } from "../components/Title";
 import { ButtonIcon } from "../components/ButtonIcon";
-import { useNavigation } from "@react-navigation/native";
+import { StackRoutesList } from "@/routes/StackRoutes";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-export default function Product() {
-  const navigation = useNavigation();
+type ProductProps = NativeStackScreenProps<StackRoutesList, "Product">;
+
+export default function Product({ navigation }: ProductProps) {
   return (
     <View
       style={{

@@ -3,10 +3,14 @@ import { View } from "react-native";
 import { Header } from "../components/Header";
 import { Title } from "../components/Title";
 import { ButtonIcon } from "../components/ButtonIcon";
-import { useNavigation } from "@react-navigation/native";
 
-export default function Home() {
-  const navigation = useNavigation();
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+
+import { StackRoutesList } from "../../routes/StackRoutes";
+
+type HomeProps = NativeStackScreenProps<StackRoutesList, "Home">;
+
+export default function Home({ navigation }: HomeProps) {
   return (
     <View
       style={{
