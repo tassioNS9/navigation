@@ -8,7 +8,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 type ProductProps = NativeStackScreenProps<StackRoutesList, "Product">;
 
-export default function Product({ navigation }: ProductProps) {
+export default function Product({ navigation, route }: ProductProps) {
   return (
     <View
       style={{
@@ -23,7 +23,7 @@ export default function Product({ navigation }: ProductProps) {
           name="arrow-circle-left"
           onPress={() => navigation.goBack()}
         />
-        <Title>Product</Title>
+        <Title>Product {route.params?.productId}</Title>
       </Header>
     </View>
   );

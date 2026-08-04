@@ -20,7 +20,7 @@ export default function Home({ navigation }: StackRoutesProps<"Home">) {
         <Title>Home</Title>
         <ButtonIcon
           name="add-circle"
-          onPress={() => navigation.navigate("Product")}
+          onPress={() => navigation.navigate("Product", { productId: "123" })}
         />
       </Header>
     </View>

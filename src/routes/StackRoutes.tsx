@@ -5,7 +5,7 @@ import Product from "../app/Product";
 
 export type StackRoutesList = {
   Home: undefined;
-  Product: undefined;
+  Product: undefined | { productId: string };
 };
 
 export type StackRoutesProps<T extends keyof StackRoutesList> =
