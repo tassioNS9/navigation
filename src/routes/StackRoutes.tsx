@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import Home from "../app/Home";
 import Product from "../app/Product";
 
@@ -6,6 +7,9 @@ export type StackRoutesList = {
   Home: undefined;
   Product: undefined;
 };
+
+export type StackRoutesProps<T extends keyof StackRoutesList> =
+  NativeStackScreenProps<StackRoutesList, T>;
 
 const Stack = createNativeStackNavigator<StackRoutesList>();
 

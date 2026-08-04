@@ -4,13 +4,9 @@ import { Header } from "../components/Header";
 import { Title } from "../components/Title";
 import { ButtonIcon } from "../components/ButtonIcon";
 
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { StackRoutesProps } from "@/routes/StackRoutes";
 
-import { StackRoutesList } from "../../routes/StackRoutes";
-
-type HomeProps = NativeStackScreenProps<StackRoutesList, "Home">;
-
-export default function Home({ navigation }: HomeProps) {
+export default function Home({ navigation }: StackRoutesProps<"Home">) {
   return (
     <View
       style={{
